@@ -11,9 +11,7 @@ jobs:
       - name: Make envfile
         uses: SpicyPizza/create-envfile@v1.3.0
         with:
-          envkey_AIRTABLE_API_KEY: ${{ secrets.AIRTABLE_API_KEY }}
-          envkey_AIRTABLE_BASE_ID: ${{ secrets.DEV_AIRTABLE_BASE_ID }}
-          envkey_AIRTABLE_TABLE_NAME: ${{ secrets.DEV_AIRTABLE_TABLE_NAME }}
+          envkey_NEXT_PUBLIC_FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_LYBERTYX }}
           file_name: .env
           fail_on_empty: false
       - run: npm ci && npm run build
