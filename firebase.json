@@ -1,4 +1,17 @@
 {
+  "functions": {
+    "predeploy": [
+      "npm --prefix \"$RESOURCE_DIR\" run lint",
+      "npm --prefix \"$RESOURCE_DIR\" run build"
+    ],
+    "source": ".",
+    "runtime": "nodejs16",
+    "ignore": [
+      "firebase.json",
+      "node_modules",
+      "**/out"
+    ]
+  },
   "hosting": {
     "public": "out",
     "ignore": [
@@ -9,28 +22,9 @@
     "cleanUrls": true,
     "rewrites": [
       {
-        "source": "**/**",
-        "function": "nextjs-server"
+        "source": "**",
+        "function": "nextServer"
       }
     ]
-  },
-  "functions": {
-    "source": ".",
-    "runtime": "nodejs16",
-    "ignore": [
-      "firebase.json",
-      "node_modules",
-      "**/out"
-    ]
-  },
-  "database": {
-    "rules": "database.rules.json"
-  },
-  "storage": {
-    "rules": "storage.rules"
-  },
-  "firestore": {
-    "rules": "firestore.rules",
-    "indexes": "firestore.indexes.json"
   }
 }
