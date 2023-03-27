@@ -2,7 +2,6 @@
 const nextConfig = {
   reactStrictMode: true,
   distDir: 'build',
-  outDir: 'out',
   swcMinify: true,
   images: {
     unoptimized: true,
