@@ -8,6 +8,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Make envfile
+        uses: SpicyPizza/create-envfile@v1.3.0
+        with:
+          envkey_NEXT_PUBLIC_FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_LYBERTYX }}
+          file_name: .env
+          fail_on_empty: false
       - run: npm ci && npm run build
       - uses: www-norma-dev/firebase-hosting-functions-deploy@main
         with:
