@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  distDir: './build',
+  distDir: 'build',
   outDir: './out',
   images: {
     unoptimized: true,
