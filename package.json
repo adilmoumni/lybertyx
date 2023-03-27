@@ -12,6 +12,7 @@
     "deploy": "next build && next export && firebase deploy --only functions,hosting"
   },
   "dependencies": {
+    "@google-cloud/storage": "^6.9.4",
     "@types/node": "18.15.10",
     "@types/react": "18.0.29",
     "@types/react-dom": "18.0.11",
@@ -19,9 +20,13 @@
     "firebase-admin": "^11.5.0",
     "firebase-functions": "^4.2.1",
     "firebase-tools": "^11.25.1",
+    "fs": "^0.0.1-security",
+    "net": "^1.0.2",
     "next": "13.2.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "storage": "^0.2.0",
+    "tls": "^0.0.1",
     "typescript": "5.0.2"
   },
   "devDependencies": {
