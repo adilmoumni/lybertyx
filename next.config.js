@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   distDir: 'build',
-  outDir: './out',
+  outDir: 'out',
   images: {
     unoptimized: true,
     loader: "custom",
