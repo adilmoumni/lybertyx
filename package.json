@@ -9,7 +9,7 @@
     "export": "next export",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "next build && firebase deploy --only functions,hosting"
+    "deploy": "next build && next export && firebase deploy --only functions,hosting"
   },
   "dependencies": {
     "@types/node": "18.15.10",
