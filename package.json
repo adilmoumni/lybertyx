@@ -2,6 +2,7 @@
   "name": "lybertyx",
   "version": "0.1.0",
   "private": true,
+  "main": "firebaseApp.js",
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export",
